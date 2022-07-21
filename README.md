@@ -4,6 +4,8 @@
 
 Learn more about sorting algorithms and to see how to manipulate the DOM elements thit those algorithms
 
+Fun Fact: it was originally made in my [Portfolio]()
+
 ---
 
 ## Gifs 
