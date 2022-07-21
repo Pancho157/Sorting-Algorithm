@@ -1,0 +1,120 @@
+@import url("./LandingSection.css");
+@import url("./ProjectsSection.css");
+@import url("./AlgorithmSection.css");
+@import url("./AboutSection.css");
+@import url("./ContactSection.css");
+@import url("./RangeInput.css");
+
+/* -------------------------Estilos Generales---------------------------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Code Medium", monospace;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("../Assets/main-bg.jpg");
+  background-position: 0px 0px;
+  animation: animatedBackground 20s linear infinite alternate;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 500px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.centerObject {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.frontShadow {
+  max-width: 90%;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  position: relative;
+  bottom: 2.3rem;
+  left: -0.3rem;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.shadow {
+  display: block;
+  max-width: 90%;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+}
+
+.shadow--tall {
+  display: block;
+  max-width: 90%;
+  height: 68px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  position: relative;
+  top: 26px;
+}
+
+.algorithm__titleShadow--height {
+  display: block;
+  height: 58px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  position: relative;
+  top: 16px;
+}
+
+@media (max-width: 518px) {
+  .algorithm__titleShadow--height {
+    display: block;
+    max-width: 90%;
+    height: 84px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    position: relative;
+    top: 42px;
+  }
+}
+
+.hover--rotate:hover {
+  cursor: pointer;
+  transform: rotate(-2deg);
+}
+
+.hover--innerShadow:hover {
+  box-shadow: inset 200px 0 0 0 #1272e3;
+  color: white;
+  cursor: pointer;
+}
+
+.mainTitleContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.mainTitle {
+  width: 1000px;
+  max-width: 90%;
+}

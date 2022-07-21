@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="stylesheet" href="./Styles/index.css" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./Assets/Icons/coding.png" />
+  <title>Francisco Muñiz</title>
+</head>
+
+<body>
+  <main class="main">
+    <section class="algorithm" id="algorithm">
+      <div class="mainTitleContainer">
+        <span class="mainTitle algorithm__titleShadow--height"></span>
+        <h2 class="mainTitle frontShadow">Algoritmos de Clasificación</h2>
+      </div>
+
+      <!-- Inicio de los controles del algoritmo -->
+
+      <section class="algorithm__controllerContainer">
+        <div class="algorithm__rangesContainer">
+          <div class="algorithm__range">
+            <p class="algorithm__text">Cantidad de columnas:</p>
+            <input type="range" min="15" max="80" step="1" value="15" class="algorithm__columnsQuantity"
+              id="colsQuantity" />
+            <p class="algorithm__text" id="colsValue"></p>
+          </div>
+
+          <div class="algorithm__range">
+            <p class="algorithm__text">Velocidad de la animación:</p>
+            <input type="range" min="1" max="300" step="1" value="1" class="algorithm__columnsQuantity"
+              id="speedRange" />
+            <p class="algorithm__text" id="speedValue"></p>
+          </div>
+        </div>
+
+        <p class="algorithmSelector__text">Algoritmo:</p>
+        <div class="algorithm__algorithmSelector">
+          <div class="hover--rotate about__downloadCV">
+            <span class="shadow--tall"></span>
+            <button type="button" id="bubbleSort" class="frontShadow algorithm__option active">
+              Bubble Sort
+            </button>
+          </div>
+
+          <div class="hover--rotate about__downloadCV">
+            <span class="shadow--tall"></span>
+            <button type="button" id="selectionSort" class="frontShadow algorithm__option">
+              Selection Sort
+            </button>
+          </div>
+
+          <div class="hover--rotate about__downloadCV">
+            <span class="shadow--tall"></span>
+            <button type="button" id="insertionSort" class="frontShadow algorithm__option">
+              Insertion Sort
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final de los controles del algoritmo -->
+
+      <!-- Inicio de la visual del algoritmo -->
+
+      <section class="algorithm__algorithmContainer" id="algorithm__algorithmContainer"></section>
+
+      <div class="algorithm__buttonsContainer">
+        <div class="about__downloadCV">
+          <span class="shadow"></span>
+          <button type="button" class="frontShadow algorithm__sortButtons" id="sortButton">
+            Ordenar
+          </button>
+        </div>
+
+        <div class="about__downloadCV">
+          <span class="shadow"></span>
+          <button type="button" class="frontShadow algorithm__sortButtons" id="stopSortingButton">
+            Parar Algoritmo
+          </button>
+        </div>
+      </div>
+
+      <!-- Final de la visual del algoritmo -->
+    </section>
+
+  </main>
+
+  <script type="text/javascript" src="./JS/EnableDisableButtons.js" defer></script>
+  <script type="text/javascript" src="./JS/ChangeActiveAlgorithm.js" defer></script>
+  <script type="text/javascript" src="./JS/ChangeRangeValues.js" defer></script>
+  <script type="text/javascript" src="./JS/SetAlgorithmBars.js" defer></script>
+  <script type="text/javascript" src="./JS/StartStopSorting.js" defer></script>
+
+  <!-- Sorting Algorithms -->
+  <script type="text/javascript" src="./JS/Algorithms/BubbleSort.js" defer></script>
+  <script type="text/javascript" src="./JS/Algorithms/InsertionSort.js" defer></script>
+  <script type="text/javascript" src="./JS/Algorithms/QuickSort.js" defer></script>
+  <script type="text/javascript" src="./JS/Algorithms/SelectionSort.js" defer></script>
+</body>
+
+</html>
