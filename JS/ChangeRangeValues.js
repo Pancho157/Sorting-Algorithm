@@ -1,11 +1,11 @@
-// Actualiza el valor de las columnas
+
 var colsRange = document.getElementById("colsQuantity");
 var toDisplayColsQuantity = document.getElementById("colsValue");
 
 var speedRange = document.getElementById("speedRange");
 var toDisplaySpeedQuantity = document.getElementById("speedValue");
 
-// Coloca los valores en los rangos cuando carga la página
+// Sets the numbers under the input Ranges when DOM content is loaded
 document.addEventListener("DOMContentLoaded", function () {
   toDisplayColsQuantity.innerHTML = colsRange.value;
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   delay = speedRange.value;
 });
 
-// Actualiza los valores de los cuando se cambia su valor
+// Sets the numbers under the input Ranges when input value changes
 document.getElementById("colsQuantity").addEventListener("change", function () {
   toDisplayColsQuantity.innerHTML = colsRange.value;
 });

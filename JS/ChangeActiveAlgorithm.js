@@ -1,3 +1,5 @@
+// Changes the active class if an algorithm is selected
+
 let list = document.querySelectorAll(".algorithm__option");
 for (let i = 0; i < list.length; i++) {
   list[i].onclick = function () {

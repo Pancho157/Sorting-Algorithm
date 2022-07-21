@@ -6,9 +6,7 @@ Learn more about sorting algorithms and to see how to manipulate the DOM element
 
 ---
 
-## Gif
-
----
+## Gifs 
 
 _Bubble Sorting Algorithm_
 

@@ -1,4 +1,6 @@
 const barsQuantity = document.getElementById("colsQuantity").value;
+
+// Generates an array of intergers with the lenght indicated by the colsRange
 var bars = Array.from(
   { length: barsQuantity },
   () => Math.floor(Math.random() * 29 + 1) // Math.random() * (max - min) + min
@@ -6,7 +8,7 @@ var bars = Array.from(
 
 let barsContainer = document.getElementById("algorithm__algorithmContainer");
 
-// Coloca las barras iniciales en el algoritmo
+// Puts the initial bars of the algorithm
 document.addEventListener("DOMContentLoaded", function () {
   bars.forEach((bar) => {
     barsContainer.innerHTML +=
@@ -14,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Genera un array de la longitud indicada en el range y lo coloca en el contenedor para las barras
+// Generates an array of intergers with the lenght indicated by the colsRange and render each element as bars of the algorithm
 document.getElementById("colsQuantity").addEventListener("change", function () {
   let barsQuantity = document.getElementById("colsQuantity").value;
   bars = Array.from(
@@ -28,14 +30,14 @@ document.getElementById("colsQuantity").addEventListener("change", function () {
   });
 });
 
-// Hace el cambio entre barras cuando lo llama algún algoritmo
+// Makes the swap of bars when called from an algorithm
 function swap(bar1, bar2) {
   let temp = bar1.style.height;
   bar1.style.height = bar2.style.height;
   bar2.style.height = temp;
 }
 
-// Establece el tiempo que tardan las animaciónes cuando lo llama algun algoritmo de Sort
+// Sets the delay of iterations in algorithms (called within algorithms)
 function delayTime(milisec) {
   return new Promise((resolve) => {
     setTimeout(() => {

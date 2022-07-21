@@ -1,31 +1,30 @@
 async function bubbleSort() {
   const bars = document.querySelectorAll(".algorithm__bar");
-  // El primer loop es para recorrer todas las columnas
-  // El segundo loop es para ir moviendolas
+  // First loop iterates each bar
+  // Second loop iterates the array till the last sorted bar
   for (let i = 0; i < bars.length - 1; i++) {
     for (let j = 0; j < bars.length - i - 1; j++) {
-      // Para el algoritmo cuando se presiona el boton
+      // Stops algorithm when the stopButton is pressed
       if (hasPressedStop == true) return;
 
-      // coloca el color rojo a las barras que no se estan comparando
+      // Puts red bg on bars
       bars[j].style.background = "#EAEBB2";
       bars[j + 1].style.background = "#EAEBB2";
 
-      // Espera entre iteraciones del segundo loop
       await delayTime(delay);
 
-      // Si el de la izquierda es mayor al de la derecha los cambia de lado
+      // Swaps bars if left is higher than the right one
       if (parseInt(bars[j].style.height) > parseInt(bars[j + 1].style.height)) {
         swap(bars[j], bars[j + 1]);
       }
 
-      // Coloca el color amarillo (comparación)
+      // Sets yellow bg on comparing bars
       bars[j].style.background = "#e43f5a";
       bars[j + 1].style.background = "#e43f5a";
     }
-    // Coloca el color verde a las ya posicionadas
+    // Sets green bg on already sorted bars
     bars[bars.length - 1 - i].style.background = "#2BA153";
   }
-  // Coloca el color verde en la ultima iteración del primer loop
+  // Sets green bg on last bar
   bars[0].style.background = "#2BA153";
 }
