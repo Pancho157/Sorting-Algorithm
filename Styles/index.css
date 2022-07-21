@@ -82,7 +82,7 @@ a {
   top: 16px;
 }
 
-@media (max-width: 518px) {
+@media (max-width: 359px) {
   .algorithm__titleShadow--height {
     display: block;
     max-width: 90%;
